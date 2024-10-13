@@ -1,6 +1,8 @@
 "use client";
 
 import React from 'react';
+import { Input } from "@/components/ui/input";
+
 
 interface SearchBarProps {
   searchTerm: string;
@@ -9,12 +11,12 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
   return (
-    <input
+    <Input
       type="text"
-      placeholder="Search documentation..."
+      placeholder="Search a docs"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      className="mb-4 p-2 border rounded w-full"
+      className=""
     />
   );
 };
