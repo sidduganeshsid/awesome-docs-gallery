@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
-        <header className="grid grid-cols-4 gap-2 items-center text-sm bg-white px-4 py-3 border shadow rounded-lg">
+        <header className="grid grid-cols-4 gap-2 items-center text-sm bg-white px-4 py-3 border shadow rounded-xl">
           <div className="col-span-1 text-xl">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           </div>
@@ -70,7 +70,7 @@ const HomePage: React.FC = () => {
             </Button>
           </div>
         </header>
-        <section className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto">
+        {!searchTerm && <section className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto">
           <span className="text-2xl text-neutral-500">✧</span>
           <h1 className="text-lg text-neutral-500 font-semibold">
             awesome-docs.gallery
@@ -78,9 +78,9 @@ const HomePage: React.FC = () => {
           <h2 className="text-5xl font-extrabold text-balance text-center leading-tight">
             A curated open-source gallery for high-quality dev docs.
           </h2>
-        </section>
+        </section>}
         <div>
-          <h2 className="text-2xl font-bold mb-5">Featured</h2>
+          <h2 className="text-2xl font-bold mb-5 mx-4">Featured</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredData.map((item) => (
               <DocCard key={item.id} {...item} />
@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-5">All docs</h2>
+          <h2 className="text-2xl font-bold mb-5 mx-4">All docs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allData.map((item) => (
               <DocCard key={item.id} {...item} />

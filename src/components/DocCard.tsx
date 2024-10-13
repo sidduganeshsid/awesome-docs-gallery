@@ -31,7 +31,7 @@ interface DocCardProps {
 const DocCard: React.FC<DocCardProps> = ({ title, description, link, logo, screenshot, x, github, linkedin }) => {
   return (
     <Card className="flex flex-col">
-      <CardHeader className="flex flex-row gap-2 items-start">
+      <CardHeader className="flex flex-row gap-5 items-start">
         <div className="flex-1">
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>

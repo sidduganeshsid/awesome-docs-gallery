@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
   return (
     <Input
       type="text"
-      placeholder="Search a docs"
+      placeholder="Search…"
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       className=""
