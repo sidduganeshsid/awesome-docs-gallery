@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import SearchBar from "@/components/SearchBar";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface HeaderProps {
   searchTerm: string;
@@ -12,7 +13,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
   return (
-    <header className="grid grid-cols-4 gap-2 items-center bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50">
+    <motion.header
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+      className="grid grid-cols-4 gap-2 items-center bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
+    >
       <div className="col-span-1 text-xl flex flex-row items-center gap-1">
         <Button variant="ghost" asChild>
           <Link href="/" className="flex flex-row gap-1 text-xl">
@@ -20,14 +26,10 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
           </Link>
         </Button>
         <Button variant="ghost" asChild>
-          <Link href="/#featured">
-            Browse
-          </Link>
+          <Link href="/#featured">Browse</Link>
         </Button>
         <Button variant="ghost" asChild>
-          <Link href="/contribute">
-            Contribute
-          </Link>
+          <Link href="/contribute">Contribute</Link>
         </Button>
       </div>
       <div className="col-span-2 flex flex-row justify-center">
@@ -49,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
           <Link href="/contribute">Submit</Link>
         </Button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
