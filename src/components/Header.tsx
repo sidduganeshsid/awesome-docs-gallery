@@ -12,24 +12,29 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
   return (
-    <header className="grid grid-cols-4 gap-2 items-center text-sm bg-white/90 backdrop-blur-sm px-4 py-3 shadow-md rounded-xl sticky top-5">
-      <div className="col-span-1 text-xl">
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      </div>
-      <div className="col-span-2 flex flex-row justify-center">
-        <Button variant="link" asChild>
-          <Link href="/" className="flex flex-row gap-1">
+    <header className="grid grid-cols-4 gap-2 items-center bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5">
+      <div className="col-span-1 text-xl flex flex-row items-center gap-1">
+        <Button variant="ghost" asChild>
+          <Link href="/" className="flex flex-row gap-1 text-xl">
+            ✲
+          </Link>
+        </Button>
+        <Button variant="ghost" asChild>
+          <Link href="/#featured">
             Browse
           </Link>
         </Button>
-        <Button variant="link" asChild>
-          <Link href="/contribute" className="flex flex-row gap-1">
+        <Button variant="ghost" asChild>
+          <Link href="/contribute">
             Contribute
           </Link>
         </Button>
       </div>
+      <div className="col-span-2 flex flex-row justify-center">
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </div>
       <div className="col-span-1 flex flex-row gap-1 justify-end">
-        <Button variant="link" asChild>
+        <Button variant="ghost" asChild>
           <Link href="/contribute" className="flex flex-row gap-1">
             <svg viewBox="0 0 496 512" className="w-4 h-4 fill-current">
               <path

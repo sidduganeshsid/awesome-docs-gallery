@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 
 interface DocCardProps {
@@ -30,39 +31,35 @@ interface DocCardProps {
 
 const DocCard: React.FC<DocCardProps> = ({ title, description, link, logo, screenshot, x, github, linkedin }) => {
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="flex flex-row gap-5 items-start">
-        <div className="flex-1">
+    <Link href="#">
+      <Card className="flex flex-col shadow-none overflow-hidden hover:shadow-lg">
+        <CardContent className="flex-1 p-0 relative">
+          <div className="w-full pt-[52.5%] relative overflow-hidden">
+            <Image
+              src={screenshot}
+              alt={title + " screenshot"}
+              fill
+              unoptimized
+            />
+          </div>
+          <div className="absolute left-5 -bottom-8 shadow-md border bg-neutral-100 rounded-full overflow-hidden w-16 h-16">
+            <img
+              src={logo}
+              alt={title + " logo"}
+              className="w-full h-full block"
+            />
+          </div>
+        </CardContent>
+        <CardHeader className="pt-14">
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
-        </div>
-        <div>
-          <img
-            src={logo}
-            alt={title + " logo"}
-            className="w-10 h-10 block rounded-full"
-          />
-        </div>
-      </CardHeader>
-      <CardContent className="flex-1">
-        <div className="w-full pt-[52.5%] relative rounded overflow-hidden">
-          <Image
-            src={screenshot}
-            alt={title + " screenshot"}
-            fill
-            unoptimized
-          />
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-row items-center justify-between">
-        <Link
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline text-sm"
-        >
-          <span>View Documentation</span>
-        </Link>
+        </CardHeader>
+        {/* <CardFooter className="flex flex-row items-center justify-between">
+        <Button asChild variant="outline">
+          <Link href={link} target="_blank" rel="noopener noreferrer">
+            <span>View Documentation</span>
+          </Link>
+        </Button>
         <div className="text-sm text-neutral-400 flex flex-row items-center gap-2">
           <Link
             href={github}
@@ -104,8 +101,9 @@ const DocCard: React.FC<DocCardProps> = ({ title, description, link, logo, scree
             </svg>
           </Link>
         </div>
-      </CardFooter>
-    </Card>
+      </CardFooter> */}
+      </Card>
+    </Link>
   );
 };
 

@@ -24,14 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-950 dark:text-neutral-50 bg-neutral-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-950 dark:text-neutral-50 bg-neutral-100 transition-all duration-100`}
       >
         {children}
       </body>

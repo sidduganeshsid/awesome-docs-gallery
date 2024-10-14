@@ -38,25 +38,32 @@ const HomePage: React.FC = () => {
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         {!searchTerm && (
           <section className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto">
-            <span className="text-2xl text-neutral-500">✧</span>
+            <span className="text-2xl text-neutral-500">✲</span>
             <h1 className="text-lg text-neutral-500 font-semibold">
               awesome-docs.gallery
             </h1>
-            <h2 className="text-5xl font-extrabold text-balance text-center leading-tight">
+            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 via-neutral-600 to-neutral-400 text-balance text-center leading-tight">
               A curated open-source gallery for high-quality dev docs.
             </h2>
           </section>
         )}
         <div>
-          <h2 className="text-2xl font-bold mb-5 mx-4">Featured</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2
+            className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
+            id="featured"
+          >
+            Featured
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {featuredData.map((item) => (
               <DocCard key={item.id} {...item} />
             ))}
           </div>
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-5 mx-4">All docs</h2>
+          <h2 className="text-2xl font-bold mb-5 mx-4 scroll-mt-28">
+            All docs
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allData.map((item) => (
               <DocCard key={item.id} {...item} />
