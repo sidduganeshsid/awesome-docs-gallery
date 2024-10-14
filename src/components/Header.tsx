@@ -37,7 +37,12 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       </div>
       <div className="col-span-1 flex flex-row gap-1 justify-end">
         <Button variant="ghost" asChild>
-          <Link href="/contribute" className="flex flex-row gap-1">
+          <Link
+            href="https://github.com/Hashnode/awesome-docs-gallery/"
+            target="_blank"
+            rel="noopener"
+            className="flex flex-row gap-1"
+          >
             <svg viewBox="0 0 496 512" className="w-4 h-4 fill-current">
               <path
                 fill="currentColor"
