@@ -5,6 +5,7 @@ import data from "../data/data.json";
 import DocCard from "@/components/DocCard";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 interface DocItem {
   id: number;
@@ -23,18 +24,19 @@ interface DocItem {
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredData = useMemo(
-    () =>
-      data.filter(
-        (item: DocItem) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase())
-      ),
-    [searchTerm]
-  );
+  const filteredAndSortedData = useMemo(() => {
+    const filtered = data.filter(
+      (item: DocItem) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    return filtered.sort((a, b) => a.title.localeCompare(b.title));
+  }, [searchTerm]);
 
-  const featuredData = filteredData.filter((item) => item.featured);
-  const allData = filteredData.filter((item) => !item.featured);
+  const featuredData = useMemo(
+    () => filteredAndSortedData.filter((item) => item.featured),
+    [filteredAndSortedData]
+  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -81,31 +83,33 @@ const HomePage: React.FC = () => {
             </h2>
           </motion.section>
         )}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <motion.h2
-            className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
-            id="featured"
-            variants={itemVariants}
-          >
-            Featured
-          </motion.h2>
+        {featuredData.length > 0 && (
           <motion.div
+            initial="hidden"
+            animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
           >
-            {featuredData.map((item) => (
-              <div key={item.id}>
-                <motion.div variants={itemVariants}>
-                  <DocCard {...item} />
-                </motion.div>
-              </div>
-            ))}
+            <motion.h2
+              className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
+              id="featured"
+              variants={itemVariants}
+            >
+              Featured
+            </motion.h2>
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
+            >
+              {featuredData.map((item) => (
+                <div key={item.id}>
+                  <motion.div variants={itemVariants} className="h-full">
+                    <DocCard {...item} />
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
+        )}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -119,11 +123,11 @@ const HomePage: React.FC = () => {
           </motion.h2>
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
           >
-            {allData.map((item) => (
+            {filteredAndSortedData.map((item) => (
               <div key={item.id}>
-                <motion.div variants={itemVariants}>
+                <motion.div variants={itemVariants} className="h-full">
                   <DocCard {...item} />
                 </motion.div>
               </div>
@@ -131,6 +135,7 @@ const HomePage: React.FC = () => {
           </motion.div>
         </motion.div>
       </main>
+      
     </>
   );
 };
