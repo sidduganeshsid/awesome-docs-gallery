@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import data from "../data/data.json";
 import DocCard from "@/components/DocCard";
 import Header from "@/components/Header";
@@ -23,10 +23,14 @@ interface DocItem {
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredData = data.filter(
-    (item: DocItem) =>
-      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredData = useMemo(
+    () =>
+      data.filter(
+        (item: DocItem) =>
+          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchTerm.toLowerCase())
+      ),
+    [searchTerm]
   );
 
   const featuredData = filteredData.filter((item) => item.featured);
@@ -37,7 +41,7 @@ const HomePage: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -45,6 +49,15 @@ const HomePage: React.FC = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
+  };
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
   };
 
   return (
@@ -55,7 +68,7 @@ const HomePage: React.FC = () => {
           <motion.section
             initial="hidden"
             animate="visible"
-            variants={itemVariants}
+            variants={sectionVariants}
             transition={{ duration: 0.2, ease: "easeInOut" }}
             className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto"
           >
