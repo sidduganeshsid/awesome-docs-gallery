@@ -5,7 +5,6 @@ import data from "../data/data.json";
 import DocCard from "@/components/DocCard";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
-import Footer from "@/components/Footer";
 
 interface DocItem {
   id: number;

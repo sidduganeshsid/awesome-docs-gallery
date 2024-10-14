@@ -1,9 +1,6 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import SearchBar from "@/components/SearchBar";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Footer: React.FC = ({ }) => {

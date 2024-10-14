@@ -66,7 +66,7 @@ const ContributePage: React.FC = () => {
             </li>
             <li>
               <span className="font-semibold">Submit a Pull Request:</span> Once
-              you've added your entry, submit a pull request for review. Our
+              you&apos;ve added your entry, submit a pull request for review. Our
               team will review your submission and merge it if it meets the
               quality standards.
             </li>
