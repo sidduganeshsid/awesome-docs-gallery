@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="grid grid-cols-4 gap-2 items-center bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
+      className="grid grid-cols-4 gap-2 items-center shadow bg-white/70 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
     >
       <div className="col-span-1 text-xl flex flex-row items-center gap-1">
         <Button variant="ghost" asChild>
