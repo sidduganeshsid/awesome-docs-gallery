@@ -1,44 +1,88 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import Header from "@/components/Header";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const ContributePage: React.FC = () => {
+  const router = useRouter();
+
+  const handleSearch = (searchTerm: string) => {
+    // Redirect user to homepage with the search term
+    router.push(`/?search=${encodeURIComponent(searchTerm)}`);
+  };
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
+  };
+
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Contribute to Awesome Docs Gallery</h1>
-      <p className="mb-4">
-        We welcome contributions from the community! You can easily add your favorite developer documentation to the Awesome Docs Gallery by following the steps below.
-      </p>
-      <h2 className="text-xl font-semibold mb-2">How to Contribute</h2>
-      <ol className="list-decimal list-inside mb-4">
-        <li className="mb-2">
-          Visit our GitHub repository: <a href="https://github.com/your-repo/awesome-docs-gallery" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub Repository</a>.
-        </li>
-        <li className="mb-2">
-          Fork the repository to your own GitHub account.
-        </li>
-        <li className="mb-2">
-          Edit the <code>data.json</code> file located in the <code>src/data/</code> directory to add your documentation entry. Each entry should include:
-          <ul className="list-disc list-inside ml-6">
-            <li><strong>id</strong>: A unique number for the entry.</li>
-            <li><strong>title</strong>: The title of the documentation.</li>
-            <li><strong>description</strong>: A brief description of the documentation.</li>
-            <li><strong>link</strong>: The URL link to the documentation.</li>
-            <li><strong>logo</strong>: A link to the logo image of the documentation.</li>
-            <li><strong>category</strong>: The category of the documentation (e.g., "API Documentation", "Framework Guides").</li>
-          </ul>
-        </li>
-        <li className="mb-2">
-          Commit your changes and create a pull request.
-        </li>
-        <li className="mb-2">
-          Our team will review your pull request, and once approved, your documentation will be added to the gallery!
-        </li>
-      </ol>
-      <p className="mb-4">
-        If you have any questions, feel free to open an issue on our GitHub repository. We appreciate your contributions!
-      </p>
-    </div>
+    <>
+      <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
+        <Header
+          searchTerm=""
+          setSearchTerm={(value) =>
+            handleSearch(typeof value === "string" ? value : "")
+          }
+        />
+        <motion.section
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto"
+        >
+          <span className="text-2xl text-neutral-500">✲</span>
+          <h1 className="text-lg text-neutral-500 font-semibold">
+            awesome-docs.gallery
+          </h1>
+          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 via-neutral-600 to-neutral-400 text-balance text-center leading-tight">
+            Contribution Guide
+          </h2>
+        </motion.section>
+        <section className="flex flex-col pt-10 pb-32 gap-4 items-start max-w-3xl mx-auto">
+          <p className="text-lg text-neutral-700">
+            We welcome all contributions that help improve this gallery of
+            high-quality developer documentation. To contribute, please follow
+            these simple steps:
+          </p>
+          <ol className="list-decimal list-inside text-neutral-700 space-y-4">
+            <li>
+              <span className="font-semibold">Fork the Repository:</span> Head
+              over to our GitHub repository and fork the project to your own
+              GitHub account.
+            </li>
+            <li>
+              <span className="font-semibold">Add Your Documentation:</span>{" "}
+              Create a new entry in the <code>data/data.json</code> file,
+              including relevant information such as title, description, link,
+              logo, and any other details.
+            </li>
+            <li>
+              <span className="font-semibold">Submit a Pull Request:</span> Once
+              you've added your entry, submit a pull request for review. Our
+              team will review your submission and merge it if it meets the
+              quality standards.
+            </li>
+            <li>
+              <span className="font-semibold">Stay Updated:</span> Keep an eye
+              on your pull request for any comments or suggestions from the
+              maintainers.
+            </li>
+          </ol>
+          <p className="text-lg text-neutral-700">
+            Thank you for helping us build a comprehensive and high-quality
+            collection of developer documentation!
+          </p>
+        </section>
+      </main>
+    </>
   );
 };
 
