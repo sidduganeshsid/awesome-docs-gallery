@@ -65,16 +65,29 @@
     "linkedin": "https://www.linkedin.com/company/docker"
   },
   {
-  "id": 6,
-  "title": "Angular Documentation",
-  "description": "Official Angular documentation providing comprehensive guides, tutorials, and API references for building efficient and scalable web applications using the Angular framework.",
-  "link": "https://angular.dev/",
-  "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896022702/kF8IpCU4O.jpg?auto=format",
-  "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896000726/_OzVRnP9H.png?auto=format",
-  "category": "framework",
-  "featured": true,
-  "x": "https://x.com/angular",
-  "github": "https://github.com/angular/angular",
-  "linkedin": ""
-}
+    "id": 6,
+    "title": "Angular Documentation",
+    "description": "Official Angular documentation providing comprehensive guides, tutorials, and API references for building efficient and scalable web applications using the Angular framework.",
+    "link": "https://angular.dev/",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896022702/kF8IpCU4O.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896000726/_OzVRnP9H.png?auto=format",
+    "category": "framework",
+    "featured": true,
+    "x": "https://x.com/angular",
+    "github": "https://github.com/angular/angular",
+    "linkedin": ""
+  },
+  {
+    "id": 7,
+    "title": "Angular Documentation",
+    "description": "Official Angular documentation providing comprehensive guides, tutorials, and API references for building efficient and scalable web applications using the Angular framework.",
+    "link": "https://angular.dev/",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896022702/kF8IpCU4O.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896000726/_OzVRnP9H.png?auto=format",
+    "category": "framework",
+    "featured": true,
+    "x": "https://x.com/angular",
+    "github": "https://github.com/angular/angular",
+    "linkedin": ""
+  }
 ]
