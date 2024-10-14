@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -98,9 +98,11 @@ const HomePage: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
           >
             {featuredData.map((item) => (
-              <motion.div key={item.id} variants={itemVariants}>
-                <DocCard {...item} />
-              </motion.div>
+              <div key={item.id}>
+                <motion.div variants={itemVariants}>
+                  <DocCard {...item} />
+                </motion.div>
+              </div>
             ))}
           </motion.div>
         </motion.div>
@@ -120,9 +122,11 @@ const HomePage: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {allData.map((item) => (
-              <motion.div key={item.id} variants={itemVariants}>
-                <DocCard {...item} />
-              </motion.div>
+              <div key={item.id}>
+                <motion.div variants={itemVariants}>
+                  <DocCard {...item} />
+                </motion.div>
+              </div>
             ))}
           </motion.div>
         </motion.div>
