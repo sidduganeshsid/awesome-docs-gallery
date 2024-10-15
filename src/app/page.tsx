@@ -71,15 +71,59 @@ const HomePage: React.FC = () => {
             animate="visible"
             variants={sectionVariants}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto"
+            className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto relative"
           >
             <span className="text-2xl text-neutral-500">✲</span>
             <h1 className="text-lg text-neutral-500 font-semibold">
               awesome-docs.gallery
             </h1>
-            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 via-neutral-600 to-neutral-400 text-balance text-center leading-tight">
+            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 via-neutral-600 to-neutral-500 text-balance text-center leading-tight">
               A curated open-source gallery for high-quality dev docs.
             </h2>
+            <div className="absolute -z-10 -top-96 -right-80">
+              <svg
+                fill="none"
+                className="w-[800px] h-auto block"
+                viewBox="0 0 981 862"
+              >
+                <g filter="url(#a)">
+                  <path
+                    fill="#FAE8FF"
+                    d="M359.5 393.5V291l56-127.5 86 53.5h101l72 59.5H775l-52 167H519.5l-160-50Z"
+                  />
+                  <path
+                    fill="#A7F3D0"
+                    d="m120.5 436.5 61-109.5h40l28.5 61 91.5 38 23.5 66.5-59 64.5-124.5-45-61-75.5Z"
+                  />
+                  <path
+                    fill="#E0F2FE"
+                    d="m252 476 30.5-356 45 99L473 262l90 77.5L766 397l122 37.5L949.5 593 766 729.5 498 742l-246-75.5V476Z"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="a"
+                    width="1069"
+                    height="862"
+                    x=".5"
+                    y="0"
+                    color-interpolation-filters="sRGB"
+                    filterUnits="userSpaceOnUse"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feGaussianBlur
+                      result="effect1_foregroundBlur_1_138"
+                      stdDeviation="60"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
           </motion.section>
         )}
         {featuredData.length > 0 && (
@@ -134,7 +178,6 @@ const HomePage: React.FC = () => {
           </motion.div>
         </motion.div>
       </main>
-      
     </>
   );
 };
