@@ -141,13 +141,31 @@ const ContributePageContent: React.FC = () => {
           </p>
           <ol>
             <li>
-              <span>Fork the Repository:</span> Head over to our GitHub
-              repository and fork the project to your own GitHub account.
+              <span>Fork the Repository:</span> Head over to our{" "}
+              <a
+                href="https://github.com/Hashnode/awesome-docs-gallery/"
+                target="_Blank"
+                rel="noopener"
+              >
+                GitHub repository
+              </a>{" "}
+              and fork the project to your own GitHub account.
             </li>
             <li>
               <span>Add Your Documentation:</span> Create a new entry in the{" "}
               <code>data/data.json</code> file, including relevant information
               such as title, description, link, logo, and any other details.
+            </li>
+            <li>
+              <span>Images CDN:</span> Use Hashnode&apos;s free{" "}
+              <a
+                href="https://hashnode.com/uploader"
+                target="_Blank"
+                rel="noopener"
+              >
+                Image uploader
+              </a>{" "}
+              to upload and grab a CDN link for your images.
             </li>
             <li>
               <span>Submit a Pull Request:</span> Once you&apos;ve added your
