@@ -86,7 +86,7 @@ const HomePageContent: React.FC = () => {
             awesome-docs.gallery
           </h1>
           <h2 className="text-3xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 dark:from-neutral-100 dark:via-neutral-300 via-neutral-600 dark:to-neutral-400 to-neutral-500 text-balance text-center !leading-tight !tracking-tight">
-            A crowdsourced open-source gallery for high-quality dev docs.
+            A crowdsourced, open-source gallery for high-quality dev docs.
           </h2>
           <div className="absolute -z-10 -top-80 right-0 lg:-right-80">
             <svg

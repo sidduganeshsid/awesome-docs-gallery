@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Awesome Docs Gallery — A crowdsourced open-source gallery for high-quality dev docs.",
+    "Awesome Docs Gallery — A crowdsourced, open-source gallery for high-quality dev docs.",
   description:
     "Discover high-quality developer documentation resources in our crowdsourced gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
   openGraph: {
     title:
-      "Awesome Docs Gallery — A crowdsourced open-source gallery for high-quality dev docs.",
+      "Awesome Docs Gallery — A crowdsourced, open-source gallery for high-quality dev docs.",
     description:
       "Discover high-quality developer documentation resources in our crowdsourced gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
     url: "https://awesome-docs.gallery",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Awesome Docs Gallery — A crowdsourced open-source gallery for high-quality dev docs.",
+      "Awesome Docs Gallery — A crowdsourced, open-source gallery for high-quality dev docs.",
     description:
       "Discover high-quality developer documentation resources in our crowdsourced gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
     creator: "@hashnode",

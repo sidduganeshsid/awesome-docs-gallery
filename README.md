@@ -6,7 +6,7 @@
 
 
 <p align="center">
-    A crowdsourced open-source gallery for high-quality dev documentation sites.
+    A crowdsourced, open-source gallery for high-quality dev documentation sites.
     <br />
     <a href="https://awesome-docs.gallery"><strong>Browse »</strong></a>
 </p>
