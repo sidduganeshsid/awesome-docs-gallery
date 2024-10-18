@@ -22,7 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
         placeholder="Search…"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full"
+        className="w-full dark:bg-neutral-900 bg-white"
       />
       {searchTerm && (
         <button className="absolute top-2 right-2" onClick={handleClear}>

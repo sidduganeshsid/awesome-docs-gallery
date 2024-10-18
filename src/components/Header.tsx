@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="grid grid-cols-4 gap-2 items-center shadow bg-white/70 dark:bg-neutral-900/60 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
+      className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-4 gap-2 items-center shadow bg-white/70 dark:bg-neutral-900/60 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
     >
       <div className="col-span-1 text-xl flex flex-row items-center gap-1">
         <Button variant="ghost" asChild>
@@ -25,17 +25,17 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
             ✲
           </Link>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button className="hidden lg:block" variant="ghost" asChild>
           <Link href="/#featured">Browse</Link>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button className="hidden lg:block" variant="ghost" asChild>
           <Link href="/contribute">Contribute</Link>
         </Button>
       </div>
-      <div className="col-span-2 flex flex-row justify-center">
+      <div className="col-span-3 lg:col-span-2 flex-row justify-center hidden md:flex">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
-      <div className="col-span-1 flex flex-row gap-1 justify-end">
+      <div className="col-span-2 lg:col-span-1 flex flex-row gap-1 justify-end">
         <Button variant="ghost" asChild>
           <Link
             href="https://github.com/Hashnode/awesome-docs-gallery/"
@@ -55,6 +55,9 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
         <Button variant="default" asChild>
           <Link href="/contribute">Submit</Link>
         </Button>
+      </div>
+      <div className="col-span-2 flex flex-row justify-center md:hidden">
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
     </motion.header>
   );
