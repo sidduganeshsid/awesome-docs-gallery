@@ -15,7 +15,9 @@
   <a href="https://x.com/hashnode">
     <img src="https://img.shields.io/badge/Follow-@hashnode-blue" alt="X" />
   </a>
-  <a href="https://news.ycombinator.com/item?id=40146998"><img src="https://img.shields.io/badge/Hacker%20News-125-%23FF6600" alt="Hacker News"></a>
+  <a href="https://hashnode.com/products/docs">
+    <img src="https://img.shields.io/badge/Docs-By_Hashnode-green" alt="X" />
+  </a>
 </p>
 
 ## Introduction
