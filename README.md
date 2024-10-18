@@ -22,7 +22,7 @@
 
 ## Introduction
 
-[Awesome Docs Gallery](https://oss.gallery) is an open-source curated list of the best open-source documentation sites on the internet.
+[Awesome Docs Gallery](https://awesome-docs.gallery) is an open-source curated list of the best open-source documentation sites on the internet.
 
 <img width="1062" alt="Screenshot of awesome-docs.gallery" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1729253347319/1LL_190KY.png?auto=format">
 
