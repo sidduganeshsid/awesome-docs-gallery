@@ -69,7 +69,7 @@ const HomePageContent: React.FC = () => {
   };
 
   return (
-    <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
+    <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10 px-5 lg:px-0 overflow-x-hidden lg:overflow-visible">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {!searchTerm && !selectedCategory && (
         <motion.section
