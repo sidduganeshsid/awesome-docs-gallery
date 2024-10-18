@@ -235,7 +235,7 @@ const HomePageContent: React.FC = () => {
                 <button
                   className={`px-4 py-2 rounded-md w-full text-left ${
                     selectedCategory === category
-                      ? "bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-white"
+                      ? "bg-neutral-950 text-neutral-50 dark:bg-neutral-800 dark:text-white"
                       : "hover:bg-neutral-200 dark:hover:bg-neutral-800"
                   }`}
                   onClick={() => setSelectedCategory(category)}
