@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "awesome-docs.gallery",
     images: [
       {
-        url: "/images/og.png",
+        url: "/images/og-adg.png",
         width: 1200,
         height: 630,
         alt: "Awesome Docs Gallery",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "Discover high-quality developer documentation resources in our crowdsourced gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
     creator: "@hashnode",
-    images: ["/images/og.png"],
+    images: ["/images/og-adg.png"],
   },
 };
 
