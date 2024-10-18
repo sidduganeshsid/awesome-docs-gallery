@@ -218,7 +218,7 @@ const HomePageContent: React.FC = () => {
           </motion.h2>
           <motion.ul
             variants={itemVariants}
-            className="space-y-2 text-sm font-medium text-neutral-700"
+            className="space-y-2 text-sm font-medium text-neutral-700 dark:text-neutral-300"
           >
             {selectedCategory && (
               <li>
