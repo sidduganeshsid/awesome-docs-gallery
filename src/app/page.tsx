@@ -22,15 +22,22 @@ interface DocItem {
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const categories = useMemo(() => {
+    const categorySet = new Set(data.map((item: DocItem) => item.category));
+    return Array.from(categorySet).sort();
+  }, []);
 
   const filteredAndSortedData = useMemo(() => {
     const filtered = data.filter(
       (item: DocItem) =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+        (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.description.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        (!selectedCategory || item.category === selectedCategory)
     );
     return filtered.sort((a, b) => a.title.localeCompare(b.title));
-  }, [searchTerm]);
+  }, [searchTerm, selectedCategory]);
 
   const featuredData = useMemo(
     () => filteredAndSortedData.filter((item) => item.featured),
@@ -65,7 +72,7 @@ const HomePage: React.FC = () => {
     <>
       <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        {!searchTerm && (
+        {!searchTerm && !selectedCategory && (
           <motion.section
             initial="hidden"
             animate="visible"
@@ -126,7 +133,7 @@ const HomePage: React.FC = () => {
             </div>
           </motion.section>
         )}
-        {featuredData.length > 0 && (
+        {!searchTerm && !selectedCategory && featuredData.length > 0 && (
           <motion.div
             initial="hidden"
             animate="visible"
@@ -153,30 +160,64 @@ const HomePage: React.FC = () => {
             </motion.div>
           </motion.div>
         )}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <motion.h2
-            variants={itemVariants}
-            className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
-          >
-            All docs
-          </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 min-h-svh">
+          <div className="md:col-span-1">
+            <motion.h2 className="text-2xl font-bold mb-5 mx-4 scroll-mt-28">
+              Categories
+            </motion.h2>
+            <ul className="space-y-2">
+              {selectedCategory && (
+                <li>
+                  <button
+                    className="px-4 py-2 border border-red-500 rounded-md w-full text-left text-red-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    onClick={() => setSelectedCategory(null)}
+                  >
+                    Clear filter
+                  </button>
+                </li>
+              )}
+              {categories.map((category) => (
+                <li key={category}>
+                  <button
+                    className={`px-4 py-2 rounded-md w-full text-left ${
+                      selectedCategory === category
+                        ? "bg-neutral-200 dark:bg-neutral-700"
+                        : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    }`}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
           <motion.div
+            initial="hidden"
+            animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
+            className="md:col-span-2"
           >
-            {filteredAndSortedData.map((item) => (
-              <div key={item.id}>
-                <motion.div variants={itemVariants} className="h-full">
-                  <DocCard {...item} />
-                </motion.div>
-              </div>
-            ))}
+            <motion.h2
+              variants={itemVariants}
+              className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
+            >
+              All docs
+            </motion.h2>
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch"
+            >
+              {filteredAndSortedData.map((item) => (
+                <div key={item.id}>
+                  <motion.div variants={itemVariants} className="h-full">
+                    <DocCard {...item} />
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </main>
     </>
   );
