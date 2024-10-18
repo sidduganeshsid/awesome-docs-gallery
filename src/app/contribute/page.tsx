@@ -2,12 +2,11 @@ import ContributePageContent from "@/components/ContributePageContent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Awesome Docs Gallery — A curated open-source gallery for high-quality dev docs.",
+  title: "Contribute - Awesome Docs Gallery",
   description:
-    "Discover high-quality developer documentation resources in our curated gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
+    "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our curated gallery.",
   openGraph: {
-    title: "Contribute — Awesome Docs Gallery",
+    title: "Contribute - Awesome Docs Gallery",
     description:
       "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our curated gallery.",
     url: "https://awesome-docs.gallery/contribute",
