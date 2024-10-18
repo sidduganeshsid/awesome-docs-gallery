@@ -48,7 +48,7 @@ const DocCard: React.FC<DocCardProps> = ({
             href={link}
             target="_blank"
             rel="noopener"
-            className="absolute left-5 -bottom-8 shadow-md border bg-neutral-100 rounded-full overflow-hidden w-16 h-16 z-20"
+            className="absolute left-5 -bottom-8 shadow-md border dark:border-neutral-800 bg-neutral-100 rounded-full overflow-hidden w-16 h-16 z-20"
           >
             <img
               src={logo}

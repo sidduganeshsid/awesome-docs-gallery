@@ -45,39 +45,121 @@ const ContributePageContent: React.FC = () => {
         <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 dark:from-neutral-100 dark:via-neutral-300 via-neutral-600 dark:to-neutral-400 to-neutral-500 text-balance text-center leading-tight">
           Contribution Guide
         </h2>
+        <div className="absolute -z-10 -top-80 -right-80">
+          <svg
+            fill="none"
+            className="w-[800px] h-auto block dark:hidden"
+            viewBox="0 0 981 862"
+          >
+            <g filter="url(#a)">
+              <path
+                fill="#FAE8FF"
+                d="M359.5 393.5V291l56-127.5 86 53.5h101l72 59.5H775l-52 167H519.5l-160-50Z"
+              />
+              <path
+                fill="#A7F3D0"
+                d="m120.5 436.5 61-109.5h40l28.5 61 91.5 38 23.5 66.5-59 64.5-124.5-45-61-75.5Z"
+              />
+              <path
+                fill="#E0F2FE"
+                d="m252 476 30.5-356 45 99L473 262l90 77.5L766 397l122 37.5L949.5 593 766 729.5 498 742l-246-75.5V476Z"
+              />
+            </g>
+            <defs>
+              <filter
+                id="a"
+                width="1069"
+                height="862"
+                x=".5"
+                y="0"
+                color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  result="effect1_foregroundBlur_1_138"
+                  stdDeviation="60"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <svg
+            fill="none"
+            className="w-[800px] h-auto hidden dark:block"
+            viewBox="0 0 1070 862"
+          >
+            <g filter="url(#a)">
+              <path
+                fill="#86198F"
+                d="M359.5 393.5V291l56-127.5 86 53.5h101l72 59.5H775l-52 167H519.5l-160-50Z"
+              />
+              <path
+                fill="#065F46"
+                d="m120.5 436.5 61-109.5h40l28.5 61 91.5 38 23.5 66.5-59 64.5-124.5-45-61-75.5Z"
+              />
+              <path
+                fill="#075985"
+                d="m252 476 30.5-356 45 99L473 262l90 77.5L766 397l122 37.5L949.5 593 766 729.5 498 742l-246-75.5V476Z"
+              />
+            </g>
+            <defs>
+              <filter
+                id="a"
+                width="1069"
+                height="862"
+                x=".5"
+                y="0"
+                color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  result="effect1_foregroundBlur_8_8"
+                  stdDeviation="60"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
       </motion.section>
       <section className="pt-10 pb-32 max-w-3xl mx-auto">
-        <div className="prose">
-          <p className="text-lg text-neutral-700">
+        <div className="prose dark:prose-invert prose-neutral">
+          <p>
             We welcome all contributions that help improve this gallery of
             high-quality developer documentation. To contribute, please follow
             these simple steps:
           </p>
-          <ol className="list-decimal list-inside text-neutral-700 space-y-4">
+          <ol>
             <li>
-              <span className="font-semibold">Fork the Repository:</span> Head
-              over to our GitHub repository and fork the project to your own
-              GitHub account.
+              <span>Fork the Repository:</span> Head over to our GitHub
+              repository and fork the project to your own GitHub account.
             </li>
             <li>
-              <span className="font-semibold">Add Your Documentation:</span>{" "}
-              Create a new entry in the <code>data/data.json</code> file,
-              including relevant information such as title, description, link,
-              logo, and any other details.
+              <span>Add Your Documentation:</span> Create a new entry in the{" "}
+              <code>data/data.json</code> file, including relevant information
+              such as title, description, link, logo, and any other details.
             </li>
             <li>
-              <span className="font-semibold">Submit a Pull Request:</span> Once
-              you&apos;ve added your entry, submit a pull request for review.
-              Our team will review your submission and merge it if it meets the
-              quality standards.
+              <span>Submit a Pull Request:</span> Once you&apos;ve added your
+              entry, submit a pull request for review. Our team will review your
+              submission and merge it if it meets the quality standards.
             </li>
             <li>
-              <span className="font-semibold">Stay Updated:</span> Keep an eye
-              on your pull request for any comments or suggestions from the
-              maintainers.
+              <span>Stay Updated:</span> Keep an eye on your pull request for
+              any comments or suggestions from the maintainers.
             </li>
           </ol>
-          <p className="text-lg text-neutral-700">
+          <p>
             Thank you for helping us build a comprehensive and high-quality
             collection of developer documentation!
           </p>
