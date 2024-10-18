@@ -35,7 +35,7 @@ const DocCard: React.FC<DocCardProps> = ({
   linkedin,
 }) => {
   return (
-    <Card className="flex flex-col overflow-hidden hover:shadow-lg h-full group">
+    <Card className="flex flex-col overflow-hidden hover:shadow-lg h-full dark:border-neutral-800 dark:bg-neutral-900">
       <CardContent className="flex-1 p-0 relative">
         {screenshot && (
           <div className="w-full pt-[52.5%] relative overflow-hidden transform scale-[1.02] hover:scale-105 transition duration-100">
@@ -59,8 +59,10 @@ const DocCard: React.FC<DocCardProps> = ({
         )}
       </CardContent>
       <CardHeader className={logo ? "pt-14" : ""}>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardTitle className="dark:text-neutral-50">{title}</CardTitle>
+        <CardDescription className="dark:text-neutral-300">
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardFooter className="flex flex-row items-center justify-between">
         {link && (
@@ -76,7 +78,7 @@ const DocCard: React.FC<DocCardProps> = ({
               href={github}
               target="_blank"
               rel="noopener"
-              className="hover:text-neutral-800 hover:underline"
+              className="hover:text-neutral-800 dark:hover:text-neutral-200"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 448 512">
                 <path
@@ -91,7 +93,7 @@ const DocCard: React.FC<DocCardProps> = ({
               href={x}
               target="_blank"
               rel="noopener"
-              className="hover:text-neutral-800 hover:underline"
+              className="hover:text-neutral-800 dark:hover:text-neutral-200"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 512 512">
                 <path
@@ -106,7 +108,7 @@ const DocCard: React.FC<DocCardProps> = ({
               href={linkedin}
               target="_blank"
               rel="noopener"
-              className="hover:text-neutral-800 hover:underline"
+              className="hover:text-neutral-800 dark:hover:text-neutral-200"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 448 512">
                 <path
