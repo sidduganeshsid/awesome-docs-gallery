@@ -22,7 +22,7 @@ const ToolsPageContent: React.FC = () => {
   };
 
   return (
-    <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
+    <main className="max-w-5xl mx-auto md:pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10 px-5 lg:px-0 overflow-x-hidden lg:overflow-x-visible">
       <Header
         searchTerm=""
         setSearchTerm={(value) =>
@@ -39,13 +39,13 @@ const ToolsPageContent: React.FC = () => {
         <span className="text-2xl text-neutral-500 dark:text-neutral-300">
           ✲
         </span>
-        <h1 className="text-lg text-neutral-500 dark:text-neutral-300 font-semibold">
+        <p className="text-lg text-neutral-500 dark:text-neutral-300 font-semibold">
           awesome-docs.gallery
+        </p>
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 dark:from-neutral-100 dark:via-neutral-300 via-neutral-600 dark:to-neutral-400 to-neutral-500 text-balance text-center !leading-tight !tracking-tight">
+          Best documentation tools for developers.
         </h1>
-        <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 dark:from-neutral-100 dark:via-neutral-300 via-neutral-600 dark:to-neutral-400 to-neutral-500 text-balance text-center leading-tight">
-          Contribution Guide
-        </h2>
-        <div className="absolute -z-10 -top-80 -right-80">
+        <div className="absolute -z-10 -top-80 right-0 lg:-right-80">
           <svg
             fill="none"
             className="w-[800px] h-auto block dark:hidden"

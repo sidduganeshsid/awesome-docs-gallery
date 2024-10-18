@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Footer: React.FC = ({ }) => {
   return (
@@ -67,6 +68,24 @@ const Footer: React.FC = ({ }) => {
             .
           </p>
           <p>Made with ❤️ by the community.</p>
+          <nav className="mt-5 -mr-4 flex flex-row gap-1 justify-end">
+            <Button variant="link" asChild>
+              <Link
+                href="/contribute"
+                className="text-neutral-800 dark:text-neutral-100"
+              >
+                How to contribute
+              </Link>
+            </Button>
+            <Button variant="link" asChild>
+              <Link
+                href="/tools"
+                className="text-neutral-800 dark:text-neutral-100"
+              >
+                Best documentation tools
+              </Link>
+            </Button>
+          </nav>
         </div>
       </div>
     </footer>
