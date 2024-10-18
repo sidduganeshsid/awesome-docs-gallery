@@ -12,7 +12,7 @@ const Footer: React.FC = ({ }) => {
       className="p-4 bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-800 mt-32 text-center"
     >
       An open-source project by{" "}
-      <a href="https://hashnode.com/projects/docs" className="font-bold">Hashnode for Docs</a>.
+      <a href="https://hashnode.com/products/docs" className="font-bold">Hashnode for Docs</a>.
     </motion.footer>
   );
 };
