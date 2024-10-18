@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       <div className="col-span-3 lg:col-span-2 flex-row justify-center hidden md:flex">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
-      <div className="col-span-2 lg:col-span-1 flex flex-row gap-1 justify-end">
+      <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-row gap-1 justify-end">
         <Button variant="ghost" asChild>
           <Link
             href="https://github.com/Hashnode/awesome-docs-gallery/"
