@@ -6,7 +6,7 @@
 
 
 <p align="center">
-    A curated open-source gallery for high-quality dev documentation sites.
+    A crowdsourced open-source gallery for high-quality dev documentation sites.
     <br />
     <a href="https://awesome-docs.gallery"><strong>Browse »</strong></a>
 </p>
@@ -22,7 +22,7 @@
 
 ## Introduction
 
-[Awesome Docs Gallery](https://awesome-docs.gallery) is an open-source curated list of the best open-source documentation sites on the internet.
+[Awesome Docs Gallery](https://awesome-docs.gallery) is an open-source crowdsourced list of the best open-source documentation sites on the internet.
 
 <img width="1062" alt="Screenshot of awesome-docs.gallery" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1729253347319/1LL_190KY.png?auto=format">
 

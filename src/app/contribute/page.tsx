@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contribute - Awesome Docs Gallery",
   description:
-    "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our curated gallery.",
+    "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our crowdsourced gallery.",
   openGraph: {
     title: "Contribute - Awesome Docs Gallery",
     description:
-      "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our curated gallery.",
+      "Add a documentation site to Awesome Docs Gallery. Help developers discover high-quality developer documentation resources in our crowdsourced gallery.",
     url: "https://awesome-docs.gallery/contribute",
     siteName: "awesome-docs.gallery",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contribute — Awesome Docs Gallery",
     description:
-      "Discover high-quality developer documentation resources in our curated gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
+      "Discover high-quality developer documentation resources in our crowdsourced gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
     creator: "@hashnode",
     images: ["/images/og.png"],
   },
