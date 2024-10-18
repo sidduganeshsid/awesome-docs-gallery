@@ -135,51 +135,7 @@ const ToolsPageContent: React.FC = () => {
       <section className="pt-10 pb-32 max-w-3xl mx-auto">
         <div className="prose dark:prose-invert prose-neutral">
           <p>
-            We welcome all contributions that help improve this gallery of
-            high-quality developer documentation. To contribute, please follow
-            these simple steps:
-          </p>
-          <ol>
-            <li>
-              <span>Fork the Repository:</span> Head over to our{" "}
-              <a
-                href="https://github.com/Hashnode/awesome-docs-gallery/"
-                target="_Blank"
-                rel="noopener"
-              >
-                GitHub repository
-              </a>{" "}
-              and fork the project to your own GitHub account.
-            </li>
-            <li>
-              <span>Add Your Documentation:</span> Create a new entry in the{" "}
-              <code>data/data.json</code> file, including relevant information
-              such as title, description, link, logo, and any other details.
-            </li>
-            <li>
-              <span>Images CDN:</span> Use Hashnode&apos;s free{" "}
-              <a
-                href="https://hashnode.com/uploader"
-                target="_Blank"
-                rel="noopener"
-              >
-                Image uploader
-              </a>{" "}
-              to upload and grab a CDN link for your images.
-            </li>
-            <li>
-              <span>Submit a Pull Request:</span> Once you&apos;ve added your
-              entry, submit a pull request for review. Our team will review your
-              submission and merge it if it meets the quality standards.
-            </li>
-            <li>
-              <span>Stay Updated:</span> Keep an eye on your pull request for
-              any comments or suggestions from the maintainers.
-            </li>
-          </ol>
-          <p>
-            Thank you for helping us build a comprehensive and high-quality
-            collection of developer documentation!
+            WIP…
           </p>
         </div>
       </section>
