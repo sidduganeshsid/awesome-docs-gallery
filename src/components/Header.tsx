@@ -28,8 +28,11 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
         <Button className="hidden lg:block" variant="ghost" asChild>
           <Link href="/#featured">Browse</Link>
         </Button>
-        <Button className="hidden lg:block" variant="ghost" asChild>
+        {/* <Button className="hidden lg:block" variant="ghost" asChild>
           <Link href="/contribute">Contribute</Link>
+        </Button> */}
+        <Button className="hidden lg:block" variant="ghost" asChild>
+          <Link href="/tools">Docs Tools</Link>
         </Button>
       </div>
       <div className="col-span-3 lg:col-span-2 flex-row justify-center hidden md:flex">
