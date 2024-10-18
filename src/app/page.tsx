@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.2, ease: "easeInOut" },
+      transition: { duration: 0.1, ease: "easeInOut" },
     },
   };
 
@@ -165,7 +165,7 @@ const HomePage: React.FC = () => {
             <motion.h2 className="text-2xl font-bold mb-5 mx-4 scroll-mt-28">
               Categories
             </motion.h2>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm font-medium text-neutral-700">
               {selectedCategory && (
                 <li>
                   <button
@@ -181,8 +181,8 @@ const HomePage: React.FC = () => {
                   <button
                     className={`px-4 py-2 rounded-md w-full text-left ${
                       selectedCategory === category
-                        ? "bg-neutral-200 dark:bg-neutral-700"
-                        : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        ? "bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-white"
+                        : "hover:bg-neutral-200 dark:hover:bg-neutral-800"
                     }`}
                     onClick={() => setSelectedCategory(category)}
                   >

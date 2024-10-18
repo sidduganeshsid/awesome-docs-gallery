@@ -72,7 +72,7 @@
     "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896022702/kF8IpCU4O.jpg?auto=format",
     "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728896000726/_OzVRnP9H.png?auto=format",
     "category": "Framework",
-    "featured": true,
+    "featured": false,
     "x": "https://x.com/angular",
     "github": "https://github.com/angular/angular",
     "linkedin": ""
@@ -384,7 +384,7 @@
     "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728972740218/jh8PxXoYD.jpg?auto=format",
     "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1728972765095/iONMbZrI2.png?auto=format",
     "category": "API",
-    "featured": false,
+    "featured": true,
     "x": "https://x.com/auth0",
     "github": "",
     "linkedin": ""
