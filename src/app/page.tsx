@@ -1,226 +1,40 @@
-"use client";
+import HomePageContent from "@/components/HomePageContent";
+import type { Metadata } from "next";
 
-import React, { useState, useMemo } from "react";
-import data from "../data/data.json";
-import DocCard from "@/components/DocCard";
-import Header from "@/components/Header";
-import { motion } from "framer-motion";
-
-interface DocItem {
-  id: number;
-  title: string;
-  description: string;
-  link: string;
-  logo: string;
-  screenshot: string;
-  category: string;
-  featured: boolean;
-  x: string;
-  github: string;
-  linkedin: string;
-}
-
-const HomePage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const categories = useMemo(() => {
-    const categorySet = new Set(data.map((item: DocItem) => item.category));
-    return Array.from(categorySet).sort();
-  }, []);
-
-  const filteredAndSortedData = useMemo(() => {
-    const filtered = data.filter(
-      (item: DocItem) =>
-        (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase())) &&
-        (!selectedCategory || item.category === selectedCategory)
-    );
-    return filtered.sort((a, b) => a.title.localeCompare(b.title));
-  }, [searchTerm, selectedCategory]);
-
-  const featuredData = useMemo(
-    () => filteredAndSortedData.filter((item) => item.featured),
-    [filteredAndSortedData]
-  );
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
+export const metadata: Metadata = {
+  title:
+    "Awesome Docs Gallery — A curated open-source gallery for high-quality dev docs.",
+  description:
+    "Discover high-quality developer documentation resources in our curated gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
+  openGraph: {
+    title:
+      "Awesome Docs Gallery — A curated open-source gallery for high-quality dev docs.",
+    description:
+      "Discover high-quality developer documentation resources in our curated gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
+    url: "https://awesome-docs.gallery",
+    siteName: "awesome-docs.gallery",
+    images: [
+      {
+        url: "/images/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Awesome Docs Gallery",
       },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.1, ease: "easeInOut" },
-    },
-  };
-
-  return (
-    <>
-      <main className="max-w-5xl mx-auto pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10">
-        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        {!searchTerm && !selectedCategory && (
-          <motion.section
-            initial="hidden"
-            animate="visible"
-            variants={sectionVariants}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="flex flex-col pt-16 pb-32 gap-1 items-center max-w-3xl mx-auto relative"
-          >
-            <span className="text-2xl text-neutral-500">✲</span>
-            <h1 className="text-lg text-neutral-500 font-semibold">
-              awesome-docs.gallery
-            </h1>
-            <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 via-neutral-600 to-neutral-500 text-balance text-center leading-tight">
-              A curated open-source gallery for high-quality dev docs.
-            </h2>
-            <div className="absolute -z-10 -top-96 -right-80">
-              <svg
-                fill="none"
-                className="w-[800px] h-auto block"
-                viewBox="0 0 981 862"
-              >
-                <g filter="url(#a)">
-                  <path
-                    fill="#FAE8FF"
-                    d="M359.5 393.5V291l56-127.5 86 53.5h101l72 59.5H775l-52 167H519.5l-160-50Z"
-                  />
-                  <path
-                    fill="#A7F3D0"
-                    d="m120.5 436.5 61-109.5h40l28.5 61 91.5 38 23.5 66.5-59 64.5-124.5-45-61-75.5Z"
-                  />
-                  <path
-                    fill="#E0F2FE"
-                    d="m252 476 30.5-356 45 99L473 262l90 77.5L766 397l122 37.5L949.5 593 766 729.5 498 742l-246-75.5V476Z"
-                  />
-                </g>
-                <defs>
-                  <filter
-                    id="a"
-                    width="1069"
-                    height="862"
-                    x=".5"
-                    y="0"
-                    color-interpolation-filters="sRGB"
-                    filterUnits="userSpaceOnUse"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend
-                      in="SourceGraphic"
-                      in2="BackgroundImageFix"
-                      result="shape"
-                    />
-                    <feGaussianBlur
-                      result="effect1_foregroundBlur_1_138"
-                      stdDeviation="60"
-                    />
-                  </filter>
-                </defs>
-              </svg>
-            </div>
-          </motion.section>
-        )}
-        {!searchTerm && !selectedCategory && featuredData.length > 0 && (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-          >
-            <motion.h2
-              className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
-              id="featured"
-              variants={itemVariants}
-            >
-              Featured
-            </motion.h2>
-            <motion.div
-              variants={containerVariants}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
-            >
-              {featuredData.map((item) => (
-                <div key={item.id}>
-                  <motion.div variants={itemVariants} className="h-full">
-                    <DocCard {...item} />
-                  </motion.div>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 min-h-svh">
-          <div className="md:col-span-1">
-            <motion.h2 className="text-2xl font-bold mb-5 mx-4 scroll-mt-28">
-              Categories
-            </motion.h2>
-            <ul className="space-y-2 text-sm font-medium text-neutral-700">
-              {selectedCategory && (
-                <li>
-                  <button
-                    className="px-4 py-2 border border-red-500 rounded-md w-full text-left text-red-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                    onClick={() => setSelectedCategory(null)}
-                  >
-                    Clear filter
-                  </button>
-                </li>
-              )}
-              {categories.map((category) => (
-                <li key={category}>
-                  <button
-                    className={`px-4 py-2 rounded-md w-full text-left ${
-                      selectedCategory === category
-                        ? "bg-neutral-950 text-neutral-50 dark:bg-neutral-50 dark:text-white"
-                        : "hover:bg-neutral-200 dark:hover:bg-neutral-800"
-                    }`}
-                    onClick={() => setSelectedCategory(category)}
-                  >
-                    {category}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="md:col-span-2"
-          >
-            <motion.h2
-              variants={itemVariants}
-              className="text-2xl font-bold mb-5 mx-4 scroll-mt-28"
-            >
-              All docs
-            </motion.h2>
-            <motion.div
-              variants={containerVariants}
-              className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch"
-            >
-              {filteredAndSortedData.map((item) => (
-                <div key={item.id}>
-                  <motion.div variants={itemVariants} className="h-full">
-                    <DocCard {...item} />
-                  </motion.div>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </main>
-    </>
-  );
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Awesome Docs Gallery — A curated open-source gallery for high-quality dev docs.",
+    description:
+      "Discover high-quality developer documentation resources in our curated gallery. Find the best payments, ML-AI, IaaS, SaaS, API and cloud docs.",
+    creator: "@hashnode",
+    images: ["/images/og.png"],
+  },
 };
 
-export default HomePage;
+export default function HomePage() {
+  return <HomePageContent />;
+}

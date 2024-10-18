@@ -39,22 +39,23 @@ const DocCard: React.FC<DocCardProps> = ({
       <CardContent className="flex-1 p-0 relative">
         {screenshot && (
           <div className="w-full pt-[52.5%] relative overflow-hidden transform scale-[1.02] hover:scale-105 transition duration-100">
-            <Image
-              src={screenshot}
-              alt={title + " screenshot"}
-              fill
-            />
+            <Image src={screenshot} alt={title + " screenshot"} fill />
             <div className="bg-gradient-to-b group-hover:opacity-0 opacity-100 from-neutral-950/0 via-neutral-950/10 to-neutral-950/20 absolute top-0 left-0 right-0 bottom-0 z-10"></div>
           </div>
         )}
         {logo && (
-          <div className="absolute left-5 -bottom-8 shadow-md border bg-neutral-100 rounded-full overflow-hidden w-16 h-16 z-20">
+          <Link
+            href={link}
+            target="_blank"
+            rel="noopener"
+            className="absolute left-5 -bottom-8 shadow-md border bg-neutral-100 rounded-full overflow-hidden w-16 h-16 z-20"
+          >
             <img
               src={logo}
               alt={title + " logo"}
               className="w-full h-full block"
             />
-          </div>
+          </Link>
         )}
       </CardContent>
       <CardHeader className={logo ? "pt-14" : ""}>
@@ -64,7 +65,7 @@ const DocCard: React.FC<DocCardProps> = ({
       <CardFooter className="flex flex-row items-center justify-between">
         {link && (
           <Button asChild variant="outline">
-            <Link href={link} target="_blank" rel="noopener noreferrer">
+            <Link href={link} target="_blank" rel="noopener">
               <span>View Documentation</span>
             </Link>
           </Button>
@@ -74,7 +75,7 @@ const DocCard: React.FC<DocCardProps> = ({
             <Link
               href={github}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="hover:text-neutral-800 hover:underline"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 448 512">
@@ -89,7 +90,7 @@ const DocCard: React.FC<DocCardProps> = ({
             <Link
               href={x}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="hover:text-neutral-800 hover:underline"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 512 512">
@@ -104,7 +105,7 @@ const DocCard: React.FC<DocCardProps> = ({
             <Link
               href={linkedin}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="hover:text-neutral-800 hover:underline"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 448 512">
