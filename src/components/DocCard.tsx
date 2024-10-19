@@ -22,6 +22,7 @@ interface DocCardProps {
   x: string;
   github: string;
   linkedin: string;
+  linkText?: string;
 }
 
 const DocCard: React.FC<DocCardProps> = ({
@@ -33,6 +34,7 @@ const DocCard: React.FC<DocCardProps> = ({
   x,
   github,
   linkedin,
+  linkText = "View Documentation",
 }) => {
   return (
     <Card className="flex flex-col overflow-hidden hover:shadow-lg h-full dark:border-neutral-800 dark:bg-neutral-900">
@@ -68,7 +70,7 @@ const DocCard: React.FC<DocCardProps> = ({
         {link && (
           <Button asChild variant="outline">
             <Link href={link} target="_blank" rel="noopener">
-              <span>View Documentation</span>
+            <span>{linkText}</span>
             </Link>
           </Button>
         )}
