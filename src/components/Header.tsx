@@ -19,24 +19,23 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       transition={{ duration: 0.2, ease: "easeInOut" }}
       className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-4 gap-2 items-center shadow bg-white/70 dark:bg-neutral-900/60 backdrop-blur-sm px-4 py-3 rounded-xl sticky top-5 z-50"
     >
-      <div className="col-span-1 text-xl flex flex-row items-center gap-1">
+      <div className="col-span-1 md:col-span-2 lg:col-span-1 text-xl flex flex-row items-center gap-2">
         <Button variant="ghost" asChild>
           <Link href="/" className="flex flex-row gap-1 text-xl">
             ✲
           </Link>
         </Button>
-        <Button
-          className="hidden lg:block px-0 md:px-2"
-          variant="ghost"
-          asChild
-        >
-          <Link href="/#featured">Browse</Link>
+        <Button className="px-0 md:px-2" variant="ghost" asChild>
+          <Link href="/#featured">
+            <span className="md:hidden">Home</span>
+            <span className="hidden md:block">Browse</span>
+          </Link>
         </Button>
         <Button className="px-0 md:px-2" variant="ghost" asChild>
           <Link href="/tools">Docs Tools</Link>
         </Button>
       </div>
-      <div className="col-span-3 lg:col-span-2 flex-row justify-center hidden md:flex">
+      <div className="col-span-3 md:col-span-2 lg:col-span-2 flex-row justify-center hidden md:flex">
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
       <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-row gap-1 justify-end">
