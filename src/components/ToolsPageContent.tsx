@@ -327,6 +327,7 @@ const ToolsPageContent: React.FC = () => {
         {sortedDocsTools.map((tool) => (
           <DocCard
             key={tool.id}
+            id={tool.id}
             title={tool.title}
             description={tool.description}
             link={tool.link}
@@ -336,6 +337,7 @@ const ToolsPageContent: React.FC = () => {
             linkedin={tool.linkedin}
             x={tool.x}
             linkText="Learn more"
+            category={tool.category}
           />
         ))}
       </section>
