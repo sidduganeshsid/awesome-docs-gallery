@@ -2,13 +2,13 @@ import ToolsPageContent from "@/components/ToolsPageContent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best documentation tools for developers - Awesome Docs Gallery",
+  title: "Best Developer Documentation Tools in 2024 - Awesome Docs Gallery",
   description:
-    "Discover the best tools for creating high-quality developer documentation. Find the best tools for AI projects, API references, cloud docs, and more.",
+    "Discover the best tools for creating high-quality developer documentation in 2024. Find the best tools for AI projects, API references, cloud docs, and more.",
   openGraph: {
-    title: "Best documentation tools for developers - Awesome Docs Gallery",
+    title: "Best Developer Documentation Tools in 2024 - Awesome Docs Gallery",
     description:
-      "Discover the best tools for creating high-quality developer documentation. Find the best tools for AI projects, API references, cloud docs, and more.",
+      "Discover the best tools for creating high-quality developer documentation in 2024. Find the best tools for AI projects, API references, cloud docs, and more.",
     url: "https://awesome-docs.gallery/tools",
     siteName: "awesome-docs.gallery",
     images: [
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best documentation tools for developers - Awesome Docs Gallery",
+    title: "Best Developer Documentation Tools in 2024 - Awesome Docs Gallery",
     description:
-      "Discover the best tools for creating high-quality developer documentation. Find the best tools for AI projects, API references, cloud docs, and more.",
+      "Discover the best tools for creating high-quality developer documentation in 2024. Find the best tools for AI projects, API references, cloud docs, and more.",
     creator: "@hashnode",
     images: ["/images/og-adg.png"],
   },
