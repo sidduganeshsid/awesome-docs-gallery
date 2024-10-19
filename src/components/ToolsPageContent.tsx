@@ -11,46 +11,158 @@ const docsTools = [
   {
     id: 1,
     title: "Docs by Hashnode",
-    description: "The content engine for your API docs, product guides, and blogs. Create and scale developer documentation, API references, and blogs with GitHub sync, built-in AI features, Headless mode, and more—powering a complete developer hub for your team.",
-    link: "https://docs.hashnode.com/",
-    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281652059/1cvYpHl9F.jpg?auto=format", 
-    screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281626134/lf9tAAH9z.png?auto=format", 
-    github: "",
+    description:
+      "The content engine for your API docs, product guides, and blogs. Create and scale developer documentation, API references, and blogs with GitHub sync, built-in AI features, Headless mode, and more—powering a complete developer hub for your team.",
+    link: "https://hashnode.com/products/docs",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281652059/1cvYpHl9F.jpg?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281626134/lf9tAAH9z.png?auto=format",
+    github: "https://github.com/hashnode",
     linkedin: "https://linkedin.com/company/hashnode",
     x: "https://x.com/hashnode",
   },
   {
     id: 2,
     title: "Docusaurus",
-    description: "Docusaurus is an open-source framework that helps developers build, deploy, and maintain documentation websites easily. It supports Markdown, and provides built-in versioning.",
+    description:
+      "Docusaurus is an open-source framework that helps developers build, deploy, and maintain documentation websites easily. It supports Markdown, and provides built-in versioning.",
     link: "https://docusaurus.io/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281269828/PUMyx1KdK.png?auto=format",
-    screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281215685/lYUHWAWaF.png?auto=format",
-    github: "",
-    linkedin: "",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281215685/lYUHWAWaF.png?auto=format",
+    github: "https://github.com/facebook/docusaurus",
+    linkedin: "https://www.linkedin.com/company/facebook",
     x: "https://x.com/docusaurus",
   },
   {
     id: 3,
     title: "GitBook",
-    description: "GitBook is a modern documentation platform that allows teams to collaborate and create knowledge bases, product docs, and internal wikis. It offers real-time collaboration, version control, and powerful search, making it easy to manage and scale documentation.",
+    description:
+      "GitBook is a modern documentation platform that allows teams to collaborate and create knowledge bases, product docs, and internal wikis. It offers real-time collaboration, version control, and powerful search, making it easy to manage and scale documentation.",
     link: "https://www.gitbook.com/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281419268/fM6o0J-Pz.jpg?auto=format",
-    screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281360388/oyM9rPIDE.png?auto=format",
-    github: "",
-    linkedin: "",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281360388/oyM9rPIDE.png?auto=format",
+    github: "https://github.com/GitbookIO",
+    linkedin: "https://www.linkedin.com/company/gitbook",
     x: "https://x.com/GitBookIO",
   },
   {
     id: 4,
     title: "ReadMe",
-    description: "ReadMe is a documentation platform designed to create interactive API docs and developer hubs. It offers features like API reference generation, customizable docs, and real-time collaboration to help teams build engaging and scalable developer experiences.",
+    description:
+      "ReadMe is a documentation platform designed to create interactive API docs and developer hubs. It offers features like API reference generation, customizable docs, and real-time collaboration to help teams build engaging and scalable developer experiences.",
     link: "https://readme.com/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281566293/xXgGQdX0F.png?auto=format",
-    screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281517207/6D_H2wfQF.png?auto=format",
-    github: "",
-    linkedin: "",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281517207/6D_H2wfQF.png?auto=format",
+    github: "https://github.com/readmeio",
+    linkedin: "https://linkedin.com/company/readme",
     x: "https://x.com/readme",
+  },
+  {
+    id: 5,
+    title: "Postman API Documentation",
+    description:
+      "Postman provides an API documentation tool that helps teams generate and share interactive, user-friendly API docs. It integrates with Postman collections to offer real-time collaboration, mock servers, and detailed API references for easier API development and testing.",
+    link: "https://www.postman.com/api-documentation-tool/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729324576015/lk0zb46Su.png?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729324607279/tHh3kJvoi.png?auto=format",
+    github: "https://github.com/postmanlabs",
+    linkedin: "https://www.linkedin.com/company/postman-platform",
+    x: "https://x.com/readme",
+  },
+  {
+    id: 6,
+    title: "SwaggerHub",
+    description:
+      "SwaggerHub streamlines API documentation by integrating with OpenAPI and Swagger. It offers collaboration tools, versioning, and built-in hosting for easy API sharing and management at scale.",
+    link: "https://swagger.io/tools/swaggerhub/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729324975558/fKwsCIPr7.jpg?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729324994173/6ljLzIDN6.png?auto=format",
+    github: "https://github.com/swagger-api",
+    linkedin: "",
+    x: "",
+  },
+  {
+    id: 7,
+    title: "Redocly",
+    description:
+      "Redocly helps teams create customizable API docs based on OpenAPI specs. With a clean UI, robust features, and theming options, it offers an excellent developer experience for API documentation.",
+    link: "https://redocly.com/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325165081/zf52V06w1.jpg?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325186955/wlseI_4vY.png?auto=format",
+    github: "https://github.com/Redocly",
+    linkedin: "https://www.linkedin.com/company/redocly",
+    x: "https://x.com/Redocly",
+  },
+  {
+    id: 8,
+    title: "Slate",
+    description:
+      "Slate is an open-source tool that helps teams create clean, simple, and responsive API documentation with a three-panel layout. It supports Markdown and is customizable for different use cases.",
+    link: "https://slatedocs.github.io/slate/#introduction",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325279437/d3CGUQlKh.png?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325313533/miigE0exA.png?auto=format",
+    github: "https://github.com/slatedocs/slate",
+    linkedin: "",
+    x: "",
+  },
+  {
+    id: 9,
+    title: "Stoplight",
+    description:
+      "Stoplight offers a visual API design and documentation platform that integrates with OpenAPI. It allows teams to design, mock, and document APIs collaboratively, streamlining the development process.",
+    link: "https://stoplight.io/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325357012/_JpBhNz73.png?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325369510/BUNMMP5yB.png?auto=format",
+    github: "https://github.com/stoplightio",
+    linkedin: "",
+    x: "",
+  },
+  {
+    id: 10,
+    title: "MkDocs",
+    description:
+      "MkDocs is a static site generator designed for building project documentation. It is simple to configure and supports Markdown for creating fast and responsive documentation websites.",
+    link: "https://www.mkdocs.org/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325624013/bDr8b92HN.png?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325643604/OybyBLItN.png?auto=format",
+    github: "https://github.com/mkdocs/mkdocs",
+    linkedin: "",
+    x: "",
+  },
+  {
+    id: 11,
+    title: "Sphinx",
+    description:
+      "Sphinx is a Python-based documentation generator, primarily used for creating technical documentation. It supports reStructuredText and Markdown, and offers extensive customization options.",
+    link: "https://www.sphinx-doc.org/en/master/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325686001/3rKO9fbJq.png?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325695210/3k7PBhkju.png?auto=format",
+    github: "https://github.com/sphinx-doc/sphinx",
+    linkedin: "",
+    x: "",
+  },
+  {
+    id: 12,
+    title: "Fern",
+    description:
+      "Fern is an API platform that helps teams design, generate, and document APIs with ease. It provides built-in support for SDK generation and offers an intuitive experience for managing APIs.",
+    link: "https://buildwithfern.com/",
+    logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325794521/HlC4oSc30.jpg?auto=format",
+    screenshot:
+      "https://cdn.hashnode.com/res/hashnode/image/upload/v1729325784004/r_wGDxClu.png?auto=format",
+    github: "https://github.com/fern-api",
+    linkedin: "",
+    x: "https://x.com/buildwithfern",
   },
 ];
 
@@ -69,6 +181,10 @@ const ToolsPageContent: React.FC = () => {
       transition: { duration: 0.2, ease: "easeInOut" },
     },
   };
+
+  const sortedDocsTools = [...docsTools].sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
 
   return (
     <main className="max-w-5xl mx-auto md:pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10 px-5 lg:px-0 overflow-x-hidden lg:overflow-x-visible">
@@ -92,7 +208,7 @@ const ToolsPageContent: React.FC = () => {
           awesome-docs.gallery
         </p>
         <h1 className="text-3xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-neutral-950 dark:from-neutral-100 dark:via-neutral-300 via-neutral-600 dark:to-neutral-400 to-neutral-500 text-balance text-center !leading-tight !tracking-tight">
-          Best documentation tools for developers.
+          Best Developer Documentation Tools in 2024
         </h1>
         <div className="absolute -z-10 -top-80 right-0 lg:-right-80">
           <svg
@@ -184,7 +300,7 @@ const ToolsPageContent: React.FC = () => {
 
       {/* Cards section to list documentation tools */}
       <section className="pt-10 pb-32 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {docsTools.map((tool) => (
+        {sortedDocsTools.map((tool) => (
           <DocCard
             key={tool.id}
             title={tool.title}
