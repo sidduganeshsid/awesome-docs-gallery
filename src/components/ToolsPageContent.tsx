@@ -20,6 +20,8 @@ const docsTools = [
     github: "https://github.com/hashnode",
     linkedin: "https://linkedin.com/company/hashnode",
     x: "https://x.com/hashnode",
+    category: "",
+    featured: false,
   },
   {
     id: 2,
@@ -33,6 +35,8 @@ const docsTools = [
     github: "https://github.com/facebook/docusaurus",
     linkedin: "https://www.linkedin.com/company/facebook",
     x: "https://x.com/docusaurus",
+    category: "",
+    featured: false,
   },
   {
     id: 3,
@@ -46,6 +50,8 @@ const docsTools = [
     github: "https://github.com/GitbookIO",
     linkedin: "https://www.linkedin.com/company/gitbook",
     x: "https://x.com/GitBookIO",
+    category: "",
+    featured: false,
   },
   {
     id: 4,
@@ -59,6 +65,8 @@ const docsTools = [
     github: "https://github.com/readmeio",
     linkedin: "https://linkedin.com/company/readme",
     x: "https://x.com/readme",
+    category: "",
+    featured: false,
   },
   {
     id: 5,
@@ -72,6 +80,8 @@ const docsTools = [
     github: "https://github.com/postmanlabs",
     linkedin: "https://www.linkedin.com/company/postman-platform",
     x: "https://x.com/readme",
+    category: "",
+    featured: false,
   },
   {
     id: 6,
@@ -85,6 +95,8 @@ const docsTools = [
     github: "https://github.com/swagger-api",
     linkedin: "",
     x: "",
+    category: "",
+    featured: false,
   },
   {
     id: 7,
@@ -98,6 +110,8 @@ const docsTools = [
     github: "https://github.com/Redocly",
     linkedin: "https://www.linkedin.com/company/redocly",
     x: "https://x.com/Redocly",
+    category: "",
+    featured: false,
   },
   {
     id: 8,
@@ -111,6 +125,8 @@ const docsTools = [
     github: "https://github.com/slatedocs/slate",
     linkedin: "",
     x: "",
+    category: "",
+    featured: false,
   },
   {
     id: 9,
@@ -124,6 +140,8 @@ const docsTools = [
     github: "https://github.com/stoplightio",
     linkedin: "",
     x: "",
+    category: "",
+    featured: false,
   },
   {
     id: 10,
@@ -137,6 +155,8 @@ const docsTools = [
     github: "https://github.com/mkdocs/mkdocs",
     linkedin: "",
     x: "",
+    category: "",
+    featured: false,
   },
   {
     id: 11,
@@ -150,6 +170,8 @@ const docsTools = [
     github: "https://github.com/sphinx-doc/sphinx",
     linkedin: "",
     x: "",
+    category: "",
+    featured: false,
   },
   {
     id: 12,
@@ -163,6 +185,8 @@ const docsTools = [
     github: "https://github.com/fern-api",
     linkedin: "",
     x: "https://x.com/buildwithfern",
+    category: "",
+    featured: false,
   },
 ];
 

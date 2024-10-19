@@ -8,7 +8,7 @@ const Footer: React.FC = ({ }) => {
   return (
     <footer className="px-5 pt-10 pb-16 text-sm bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-800 text-center">
       <div className="max-w-5xl grid grid-cols-4 gap-5 mx-auto">
-        <div className="col-span-1 flex flex-col items-start gap-10">
+        <div className="col-span-full md:col-span-1 flex flex-col items-center md:items-start gap-10">
           <span className="text-3xl text-neutral-500 dark:text-neutral-300">
             ✲
           </span>
@@ -54,7 +54,7 @@ const Footer: React.FC = ({ }) => {
             </a>
           </div>
         </div>
-        <div className="col-span-3 text-right flex flex-col gap-2">
+        <div className="col-span-full md:col-span-3 text-center md:text-right flex flex-col gap-2 items-center md:items-end">
           <p>
             An open-source project by{" "}
             <a
