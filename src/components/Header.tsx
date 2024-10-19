@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
           </Link>
         </Button>
         <Button className="px-0 md:px-2" variant="ghost" asChild>
-          <Link href="/tools">Docs Tools</Link>
+          <Link href="/tools">Best Tools</Link>
         </Button>
       </div>
       <div className="col-span-3 md:col-span-2 lg:col-span-2 flex-row justify-center hidden md:flex">
