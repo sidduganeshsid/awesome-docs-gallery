@@ -11,7 +11,7 @@ const docsTools = [
   {
     id: 1,
     title: "Docs by Hashnode",
-    description: "The content engine for your API docs and product guides. Create and scale developer documentation and API references with GitHub sync, built in AI-features, Headless mode and more.",
+    description: "The content engine for your API docs, product guides, and blogs. Create and scale developer documentation, API references, and blogs with GitHub sync, built-in AI features, Headless mode, and more—powering a complete developer hub for your team.",
     link: "https://docs.hashnode.com/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281652059/1cvYpHl9F.jpg?auto=format", 
     screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281626134/lf9tAAH9z.png?auto=format", 
@@ -33,7 +33,7 @@ const docsTools = [
   {
     id: 3,
     title: "GitBook",
-    description: "Collaborative documentation platform for teams and individuals.",
+    description: "GitBook is a modern documentation platform that allows teams to collaborate and create knowledge bases, product docs, and internal wikis. It offers real-time collaboration, version control, and powerful search, making it easy to manage and scale documentation.",
     link: "https://www.gitbook.com/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281419268/fM6o0J-Pz.jpg?auto=format",
     screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281360388/oyM9rPIDE.png?auto=format",
@@ -44,7 +44,7 @@ const docsTools = [
   {
     id: 4,
     title: "ReadMe",
-    description: "The all-in-one platform for creating user-friendly API documentation and seamless developer experiences.",
+    description: "ReadMe is a documentation platform designed to create interactive API docs and developer hubs. It offers features like API reference generation, customizable docs, and real-time collaboration to help teams build engaging and scalable developer experiences.",
     link: "https://readme.com/",
     logo: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281566293/xXgGQdX0F.png?auto=format",
     screenshot: "https://cdn.hashnode.com/res/hashnode/image/upload/v1729281517207/6D_H2wfQF.png?auto=format",
@@ -195,7 +195,7 @@ const ToolsPageContent: React.FC = () => {
             github={tool.github}
             linkedin={tool.linkedin}
             x={tool.x}
-            linkText="Check out the tool"
+            linkText="Learn more"
           />
         ))}
       </section>
