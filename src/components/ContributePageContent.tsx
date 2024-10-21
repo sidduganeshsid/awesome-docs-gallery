@@ -157,6 +157,17 @@ const ContributePageContent: React.FC = () => {
               such as title, description, link, logo, and any other details.
             </li>
             <li>
+              <span>Add Your Documentation Tool:</span> Create a new entry in the {" "}
+              <a
+                href="https://github.com/Hashnode/awesome-docs-gallery/blob/main/src/components/ToolsPageContent.tsx"
+                target="_Blank"
+                rel="noopener"
+              >
+              ToolsPageContext.tsx 
+              </a>{" "}
+              file, including relevant information such as title, description, link, logo, and any other details.
+            </li>
+            <li>
               <span>Images CDN:</span> Use Hashnode&apos;s free{" "}
               <a
                 href="https://hashnode.com/uploader"
