@@ -1,5 +1,5 @@
 <a href="https://awesome-docs.gallery">
-  <img alt="Awesome Docs Gallery" src="https://awesome-docs.gallery/images/og-adg.png" />
+  <img alt="Awesome Docs Gallery" src="https://awesome-docs.gallery/images/awesome-docs-gallery-og.png" />
 </a>
 
 <h3 align="center">Awesome Docs Gallery</h3>
