@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import data from "../data/data.json";
 import DocCard from "@/components/DocCard";
 import Header from "@/components/Header";
@@ -71,10 +71,13 @@ const HomePageContent: React.FC = () => {
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
-    if (categoriesRef.current) {
+  };
+
+  useEffect(() => {
+    if (selectedCategory && categoriesRef.current) {
       categoriesRef.current.scrollIntoView();
     }
-  };
+  }, [selectedCategory]);
 
   return (
     <main className="max-w-5xl mx-auto md:pt-5 transition-colors duration-200 flex flex-col items-stretch gap-10 px-5 lg:px-0 overflow-x-hidden lg:overflow-x-visible">
@@ -216,7 +219,9 @@ const HomePageContent: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="hidden md:block md:col-span-1 scroll-mt-20"
+          className={`md:col-span-1 scroll-mt-24 ${
+            selectedCategory ? "block" : "hidden md:block"
+          }`}
           ref={categoriesRef}
           id="categories"
         >
