@@ -466,6 +466,46 @@
     "x": "https://x.com/Netlify",
     "github": "https://github.com/netlify",
     "linkedin": "https://www.linkedin.com/company/netlify/"
+  },
+  {
+    "id": 37,
+    "title": "Medusa Documentation",
+    "description": "Medusa documentation provides detailed guides, tutorials, and API references for building customizable and scalable ecommerce platforms.",
+    "link": "https://docs.medusajs.com/",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729495718960/4yeJFiueA.jpeg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729495778244/GsjmHNwLL.png?auto=format",
+    "category": "Ecommerce",
+    "featured": false,
+    "x": "",
+    "github": "https://github.com/medusajs/medusa",
+    "linkedin": "https://www.linkedin.com/company/medusajs/"
+  },
+  {
+    "id": 38,
+    "title": "Clerk Documentation",
+    "description": "Clerk documentation provides clear and detailed resources for adding authentication and identity management to your apps.",
+    "link": "https://clerk.com/docs",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729496096918/Rj2iEsw5J.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729496142442/zOARCJpzd.png?auto=format",
+    "category": "API",
+    "featured": false,
+    "x": "https://x.com/ClerkDev",
+    "github": "https://github.com/clerk",
+    "linkedin": "https://www.linkedin.com/company/clerkinc/"
+  },
+  {
+    "id": 39,
+    "title": "Dub.co Documentation",
+    "description": "Dub documentation provides comprehensive guides and API references for creating and managing short URLs, with built-in analytics and tracking features.",
+    "link": "https://dub.co/docs/introduction",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729501949149/igfJC2ikQ.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729501982407/9viD3yECq.png?auto=format",
+    "category": "Analytics",
+    "featured": false,
+    "x": "https://x.com/dubdotco",
+    "github": "",
+    "linkedin": ""
   }
+
 
 ]
