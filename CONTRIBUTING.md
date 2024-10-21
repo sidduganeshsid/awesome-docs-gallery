@@ -3,7 +3,7 @@ We welcome all contributions that help improve this gallery of high-quality deve
 1. Fork the Repository: Head over to our [GitHub repository](https://github.com/Hashnode/awesome-docs-gallery/) and fork the project to your own GitHub account.
 2. a. Add Your Documentation: Create a new entry in the `data/data.json` file, including relevant information such as title, description, link, logo, and any other details.
    
-   b. Add you documentation tool: Create a new entry in the [ToolsPageContext.tsx](https://github.com/Hashnode/awesome-docs-gallery/blob/main/src/components/ToolsPageContent.tsx) file, including relevant information such as title, description, link, logo, and any other details.
+   b. Add Your Documentation Tool: Create a new entry in the [ToolsPageContext.tsx](https://github.com/Hashnode/awesome-docs-gallery/blob/main/src/components/ToolsPageContent.tsx) file, including relevant information such as title, description, link, logo, and any other details.
 
 4. Images CDN: Use Hashnode's free [Image uploader](https://hashnode.com/uploader) to upload and grab a CDN link for your images.
 5. Submit a Pull Request: Once you've added your entry, submit a pull request for review. Our team will review your submission and merge it if it meets the quality standards.
