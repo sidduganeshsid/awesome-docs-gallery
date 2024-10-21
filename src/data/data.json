@@ -492,6 +492,20 @@
     "x": "https://x.com/ClerkDev",
     "github": "https://github.com/clerk",
     "linkedin": "https://www.linkedin.com/company/clerkinc/"
+  },
+  {
+    "id": 39,
+    "title": "Dub.co Documentation",
+    "description": "Dub documentation provides comprehensive guides and API references for creating and managing short URLs, with built-in analytics and tracking features.",
+    "link": "https://dub.co/docs/introduction",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729501949149/igfJC2ikQ.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729501982407/9viD3yECq.png?auto=format",
+    "category": "Analytics",
+    "featured": false,
+    "x": "https://x.com/dubdotco",
+    "github": "",
+    "linkedin": ""
   }
+
 
 ]
