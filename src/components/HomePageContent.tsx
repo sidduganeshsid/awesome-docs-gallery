@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import data from "../data/data.json";
 import DocCard from "@/components/DocCard";
 import Header from "@/components/Header";
@@ -23,6 +23,7 @@ interface DocItem {
 const HomePageContent: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const categoriesRef = useRef<HTMLDivElement>(null);
 
   const categories = useMemo(() => {
     const categorySet = new Set(data.map((item: DocItem) => item.category));
@@ -66,6 +67,13 @@ const HomePageContent: React.FC = () => {
       y: 0,
       transition: { duration: 0.1, ease: "easeInOut" },
     },
+  };
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
+    if (categoriesRef.current) {
+      categoriesRef.current.scrollIntoView();
+    }
   };
 
   return (
@@ -208,7 +216,9 @@ const HomePageContent: React.FC = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="hidden md:block md:col-span-1"
+          className="hidden md:block md:col-span-1 scroll-mt-20"
+          ref={categoriesRef}
+          id="categories"
         >
           <motion.h2
             variants={itemVariants}
@@ -238,7 +248,7 @@ const HomePageContent: React.FC = () => {
                       ? "bg-neutral-950 text-neutral-50 dark:bg-neutral-800 dark:text-white"
                       : "hover:bg-neutral-200 dark:hover:bg-neutral-800"
                   }`}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryClick(category)}
                 >
                   {category}
                 </button>
