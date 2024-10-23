@@ -570,6 +570,19 @@
     "x": "https://x.com/getpieces",
     "github": "https://github.com/pieces-app/documentation",
     "linkedin": ""
+  },
+  {
+    "id": 45,
+    "title": "KitOps Documentation",
+    "description": "KitOps Documentation provides developers with comprehensive guidance on using KitOps for streamlined MLOps workflows, enabling efficient model development, versioning, and deployment.",
+    "link": "https://kitops.ml/docs/overview.html",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729568910387/65A-vv4WB.png?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729568989044/CCGl_8ZYd.png?auto=format",
+    "category": "ML-AI",
+    "featured": false,
+    "x": "https://x.com/kit_ops",
+    "github": "https://github.com/jozu-ai/kitops/",
+    "linkedin": "https://www.linkedin.com/company/kitops-oss/"
   }
 
 ]
