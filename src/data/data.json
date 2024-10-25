@@ -573,6 +573,45 @@
   },
   {
     "id": 45,
+    "title": "gRPC Documentation",
+    "description": "gRPC Documentation provides RPC concepts, A high performance, open source universal RPC framework developed by Google.",
+    "link": "https://grpc.io/docs/",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729680707737/BE3E6JEJJ.png?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729679714957/gteV9SwKd.png?auto=format",
+    "category": "Microservices",
+    "featured": false,
+    "x": "https://x.com/grpcio",
+    "github": "https://github.com/grpc",
+    "linkedin": ""
+  },
+  {
+    "id": 46,
+    "title": "KitOps Documentation",
+    "description": "KitOps Documentation provides developers with comprehensive guidance on using KitOps for streamlined MLOps workflows, enabling efficient model development, versioning, and deployment.",
+    "link": "https://kitops.ml/docs/overview.html",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729568910387/65A-vv4WB.png?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729568989044/CCGl_8ZYd.png?auto=format",
+    "category": "ML-AI",
+    "featured": false,
+    "x": "https://x.com/kit_ops",
+    "github": "https://github.com/jozu-ai/kitops/",
+    "linkedin": "https://www.linkedin.com/company/kitops-oss/"
+  },
+  {
+    "id": 47,
+    "title": "Cerbos Documentation",
+    "description": "Cerbos Documentation explains how to implement and run open source Cerbos Policy Decision Point as an externalized authorization provider for your application.",
+    "link": "https://docs.cerbos.dev",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729793546436/5ZZGygXmX.jpg?auto=format",
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1729793227760/x62Wk2Ec3.png?auto=format",
+    "category": "Microservices",
+    "featured": false,
+    "x": "https://x.com/cerbosdev",
+    "github": "https://github.com/cerbos/cerbos",
+    "linkedin": "https://www.linkedin.com/company/cerbos-dev/"
+  },
+  {
+    "id": 48,
     "title": "Deno",
     "description": "Deno documentation offers comprehensive guides and API references for the Deno runtime, Deno Deploy, and its ecosystem, making it a valuable resource for developers using Deno for web development and beyond.",
     "link": "https://docs.deno.com/runtime/getting_started/installation/",
@@ -585,7 +624,7 @@
     "linkedin": "https://www.linkedin.com/company/deno/"
   },
   {
-    "id": 46,
+    "id": 49,
     "title": "Kaggle",
     "description": "Kaggle documentation provides resources for data science and machine learning, including competitions, datasets, notebooks, and APIs.",
     "link": "https://www.kaggle.com/docs",
@@ -598,7 +637,7 @@
     "linkedin": "https://www.linkedin.com/company/kaggle/"
   },
   {
-    "id": 47,
+    "id": 50,
     "title": "Render",
     "description": "Render documentation provides comprehensive guides for deploying and managing web applications, databases, background tasks, and static sites within a scalable and managed cloud environment.",
     "link": "https://docs.render.com/",
