@@ -661,5 +661,18 @@
     "x": "https://x.com/reactnative", 
     "github": "https://github.com/facebook/react-native", 
     "linkedin": "https://www.linkedin.com/products/facebook-react-native"
+  },
+  { 
+    "id": 52, 
+    "title": "Spring Framework Documentation", 
+    "description": "Official Spring Framework documentation: an open-source framework for building Java applications, providing comprehensive infrastructure support for enterprise-level development. It includes features like dependency injection (DI), aspect-oriented programming (AOP), and transaction management, making Java development easier and more efficient.", 
+    "link": "https://docs.spring.io/spring-framework/reference/index.html",
+    "logo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1739870110765/KkyZagBos.png?auto=format", 
+    "screenshot": "https://cdn.hashnode.com/res/hashnode/image/upload/v1739870300657/87UZilbbu.jpg?auto=format", 
+    "category": "Framework", 
+    "featured": false, 
+    "x": "https://x.com/springframework", 
+    "github": "https://github.com/spring-projects/spring-framework", 
+    "linkedin": ""
   }
 ]
